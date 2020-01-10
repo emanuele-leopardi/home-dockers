@@ -19,5 +19,5 @@ services:
             -s "Volume1;/media/Volume1;yes;no;yes;;;;Volume1" \
             -s "Volume2;/media/Volume2;yes;no;yes;;;;Volume2" \
             -s "BluRay;/media/BluRay;yes;no;yes;;;;BluRay" \
-            -u "root:changeme"
+            -u "root;changeme"
 
