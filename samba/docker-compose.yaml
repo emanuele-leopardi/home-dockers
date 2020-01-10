@@ -14,10 +14,9 @@ services:
       - /media/Volume2:/media/Volume2
       - /media/BluRay:/media/BluRay
     restart: unless-stopped
-    command: -p -n \
-            -s "Volume0;/media/Volume0;yes;no;yes;;;;Volume0" \
-            -s "Volume1;/media/Volume1;yes;no;yes;;;;Volume1" \
-            -s "Volume2;/media/Volume2;yes;no;yes;;;;Volume2" \
-            -s "BluRay;/media/BluRay;yes;no;yes;;;;BluRay" \
-            -u "root;changeme"
-
+    command: "-n \
+                -s \"Volume0;/media/Volume0;yes;no;yes;;;;Volume0\" \
+                -s \"Volume1;/media/Volume1;yes;no;yes;;;;Volume1\" \
+                -s \"Volume2;/media/Volume2;yes;no;yes;;;;Volume2\" \
+                -s \"BluRay;/media/BluRay;yes;no;yes;;;;BluRay\" \
+                -u \"root;changeme\" -p"
