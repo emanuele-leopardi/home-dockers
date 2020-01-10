@@ -1,0 +1,23 @@
+version: 2
+services:
+  samba:
+    container_name: samba
+    image: dperson/samba:latest
+    ports:
+      - 139:139
+      - 445:445
+      - 137:137/udp
+      - 138:138/udp
+    volumes:
+      - /media/Volume0:/media/Volume0
+      - /media/Volume1:/media/Volume1
+      - /media/Volume2:/media/Volume2
+      - /media/BluRay:/media/BluRay
+    restart: unless-stopped
+    command: -p -n \
+            -s "Volume0;/media/Volume0;yes;no;yes;;;;Volume0" \
+            -s "Volume1;/media/Volume1;yes;no;yes;;;;Volume1" \
+            -s "Volume2;/media/Volume2;yes;no;yes;;;;Volume2" \
+            -s "BluRay;/media/BluRay;yes;no;yes;;;;BluRay" \
+            -u "root:changeme"
+

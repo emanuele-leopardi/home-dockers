@@ -1,6 +1,8 @@
 version: 2
 services:
   open-speedtest:
+    container_name: openspeedtest
     image: mlabbe/openspeedtest:latest
     ports:
       - 8081:8080
+    restart: unless-stopped
