@@ -1,7 +1,7 @@
 version: 2
 services:
   open-speedtest:
-    container_name: openspeedtest
+    container_name: open-speedtest
     image: mlabbe/openspeedtest:latest
     ports:
       - 8081:8080
