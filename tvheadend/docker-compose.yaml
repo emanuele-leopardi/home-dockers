@@ -1,0 +1,18 @@
+version: "2"
+services:
+  tvheadend:
+    image: linuxserver/tvheadend
+    container_name: tvheadend
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Rome
+    volumes:
+      - /opt/tvheadend/config:/config
+      - /media/Volume1/tvheadend-recordings:/recordings
+    ports:
+      - 9981:9981
+      - 9982:9982
+    devices:
+      - /dev/dvb:/dev/dvb
+    restart: unless-stopped
