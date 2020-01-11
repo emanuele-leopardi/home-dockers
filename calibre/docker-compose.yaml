@@ -8,8 +8,8 @@ services:
       - PGID=1000
       - TZ=Europe/Rome
     volumes:
-      - /media/Volume0/Ebooks:/config
-      - /media/Volume1/Ebooks:/Ebooks
+      - /media/Volume0/Ebooks:/Ebooks
+      - /media/Volume1/Ebooks:/config
     ports:
       - 7070:8080
       - 7071:8081
