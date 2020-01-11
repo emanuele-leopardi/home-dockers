@@ -1,0 +1,17 @@
+version: "2"
+services:
+  calibre:
+    image: linuxserver/calibre
+    container_name: calibre
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Rome
+    volumes:
+      - /media/Volume0/Ebooks:/config
+      - /media/Volume1/Ebooks:/Ebooks
+    ports:
+      - 7070:8080
+      - 7071:8081
+      - 3389:3389
+    restart: unless-stopped
