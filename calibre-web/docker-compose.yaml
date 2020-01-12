@@ -1,0 +1,16 @@
+version: "2"
+services:
+  calibre-web:
+    image: linuxserver/calibre-web
+    container_name: calibre-web
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Rome
+      - DOCKER_MODS=linuxserver/calibre-web:calibre
+    volumes:
+      - /opt/calibre-web:/config
+      - /media/Volume1/Ebooks/Biblioteca\ di\ Calibre/:/books
+    ports:
+      - 8083:8083
+    restart: unless-stopped
