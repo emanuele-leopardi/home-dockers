@@ -8,7 +8,7 @@ services:
       - PGID=1000
       - TZ=Europe/London
     volumes:
-      - opt/booksonic/config:/config
+      - /opt/booksonic/config:/config
       - /media/Volume1/Audiobooks:/books
     ports:
       - 4040:4040
