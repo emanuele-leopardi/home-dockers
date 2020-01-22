@@ -1,0 +1,15 @@
+version: "2"
+services:
+  booksonic:
+    image: linuxserver/booksonic
+    container_name: booksonic
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+    volumes:
+      - opt/booksonic/config:/config
+      - /media/Volume1/Audiobooks:/books
+    ports:
+      - 4040:4040
+    restart: unless-stopped
