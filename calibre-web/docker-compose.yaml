@@ -10,7 +10,7 @@ services:
       - DOCKER_MODS=linuxserver/calibre-web:calibre
     volumes:
       - /opt/calibre-web:/config
-      - /media/Volume1/Ebooks/Biblioteca di calibre/:/books
+      - /media/Volume1/Ebooks/Biblioteca0/:/books
     ports:
       - 8083:8083
     restart: unless-stopped
