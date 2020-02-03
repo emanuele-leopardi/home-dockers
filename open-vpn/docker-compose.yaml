@@ -8,8 +8,8 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Europe/London
-      - INTERFACE=eth0 #optional
+      - TZ=Europe/Rome
+      #- INTERFACE=eth0 #optional
     volumes:
       - /opt/open-vpn:/config
     ports:
