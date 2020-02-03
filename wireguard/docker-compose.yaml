@@ -1,0 +1,12 @@
+version: "2"
+services:
+ vpn:
+  image: cmulk/wireguard-docker:buster
+  volumes:
+   - /opt/wireguard/config:/etc/wireguard
+  ports:
+   - 5555:5555/udp
+  restart: unless-stopped
+  cap_add:
+   - NET_ADMIN
+   - SYS_MODULE
