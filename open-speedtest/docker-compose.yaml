@@ -1,4 +1,4 @@
-version: 2
+version: "2"
 services:
   open-speedtest:
     container_name: open-speedtest

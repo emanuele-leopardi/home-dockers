@@ -1,4 +1,4 @@
-version: 2
+version: "2"
 services:
   transmission:
     container_name: transmission
