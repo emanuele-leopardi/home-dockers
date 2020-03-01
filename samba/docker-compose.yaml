@@ -3,6 +3,9 @@ services:
   samba:
     container_name: samba
     image: dperson/samba:latest
+    environment:
+      - USERID=1000
+      - GROUPID=1000
     ports:
       - 139:139
       - 445:445
