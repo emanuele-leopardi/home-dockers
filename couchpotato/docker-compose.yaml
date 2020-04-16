@@ -1,0 +1,15 @@
+version: "2"
+services:
+  couchpotato:
+    image: couchpotato/couchpotato
+    container_name: couchpotato
+    environment:
+      - CP_UID=1000
+      - CP_GID=1000
+      - TZ=Europe/Rome
+    volumes:
+      - /opt/couchpotato:/datadir
+      - /media/Volume1/Movies/:/media
+    ports:
+      - 5050:5050
+    restart: unless-stopped
