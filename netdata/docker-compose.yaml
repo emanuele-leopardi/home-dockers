@@ -3,6 +3,7 @@ services:
   netdata:
     image: netdata/netdata
     hostname: htpc.home # set to fqdn of host
+    container_name: netdata
     ports:
       - 19999:19999
     cap_add:
