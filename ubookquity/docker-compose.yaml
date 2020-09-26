@@ -1,0 +1,17 @@
+version: "2.1"
+services:
+  ubooquity:
+    image: linuxserver/ubooquity
+    container_name: ubooquity
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Rome
+      - MAXMEM=maxmem
+    volumes:
+      - /opt/ubookquity:/config
+      - /media/Volume1/Ebooks:/Ebooks
+    ports:
+      - 2202:2202
+      - 2203:2203
+    restart: unless-stopped
