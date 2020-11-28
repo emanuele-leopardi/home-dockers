@@ -7,7 +7,7 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/Rome
-      - MAXMEM=maxmem
+      - MAXMEM=2048
     volumes:
       - /opt/ubookquity:/config
       - /media/Volume1/Ebooks:/Ebooks
